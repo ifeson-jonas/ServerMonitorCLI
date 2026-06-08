@@ -18,5 +18,28 @@ public static class ConsoleFormatter
 
         Console.WriteLine();
         Console.WriteLine("=================================");
+
+
+
+
+        if (serverInfo.CpuUsage > 80)
+        {
+            Console.WriteLine("⚠ High CPU Usage");
+        }
+
+        if (serverInfo.MemoryUsage > 90)
+        {
+            Console.WriteLine("⚠ High Memory Usage");
+        }
+
+        if (serverInfo.DiskUsage > 90)
+        {
+            Console.WriteLine("⚠ High Disk Usage");
+        }
+
+
+
+
     }
 }
+

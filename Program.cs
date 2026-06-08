@@ -10,6 +10,7 @@ var cpuService = new CpuService();
 var memoryService = new MemoryService();
 var diskService = new DiskService();
 var uptimeService = new UptimeService();
+var helpMode = args.Contains("--help");
 
 if (watchMode)
 {
@@ -47,4 +48,12 @@ else
         var reportGenerator = new ReportGenerator();
         reportGenerator.Generate(serverInfo);
     }
+}
+
+if (helpMode)
+{
+    Console.WriteLine("Usage:");
+    Console.WriteLine("--report   Generate a report");
+    Console.WriteLine("--watch    Watch server resources");
+    Console.WriteLine("--help     Show this help message");
 }
